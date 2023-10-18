@@ -27,10 +27,10 @@ export default function Home() {
   ]
 
   return (
-    <div className="w-full h-screen flex flex-col-reverse justify-between bg-[--white]">
-      <div className="py-1 px-2.5 h-full w-full">
+    <div className="w-full h-screen flex flex-col-reverse justify-between bg-[--]">
+      <div className="py-1.5 px-1.5 h-full w-full">
 
-        <div className="flex flex-col gap-2 items-start justify-center h-fit">
+        <div className="flex flex-col gap-2 items-start justify-center h-fit  w-full">
           {/* User and Notifications */}
           <div className="flex flex-nowrap items-center justify-between w-full h-14 bg-transparent text-white text-2xl rounded-lg px-4 py-2">
             <Link href={`/`} className="cursor-pointer text-5xl text-[--blue]"><BiSolidUserCircle/></Link>
@@ -75,8 +75,12 @@ export default function Home() {
             </button>
           </div>
 
-          <Tables/>
-          <Transaction/>
+          <div className="w-full ">
+            <Tables/>
+          </div>
+          <div className="w-full">
+            <Transaction/>
+          </div>
 
         </div>
       </div>
