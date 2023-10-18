@@ -26,30 +26,6 @@ const Tables = () => {
       action: {deposit: <BsArrowBarDown/>, withdrawal: <BsArrowBarUp/>, swap: <BsArrowRepeat/>},
       icon: <FaEthereum/>
     },
-    {
-      name: "LTC",
-      value: 1.00,
-      action: {deposit: <BsArrowBarDown/>, withdrawal: <BsArrowBarUp/>, swap: <BsArrowRepeat/>},
-      icon: <FaLitecoinSign/>
-    },
-    {
-      name: "BTC",
-      value: 0.520000,
-      action: {deposit: <BsArrowBarDown/>, withdrawal: <BsArrowBarUp/>, swap: <BsArrowRepeat/>},
-      icon: <BsCurrencyBitcoin/>
-    },
-    {
-      name: "ETH",
-      value: 300,
-      action: {deposit: <BsArrowBarDown/>, withdrawal: <BsArrowBarUp/>, swap: <BsArrowRepeat/>},
-      icon: <FaEthereum/>
-    },
-    {
-      name: "ETH",
-      value: 300,
-      action: {deposit: <BsArrowBarDown/>, withdrawal: <BsArrowBarUp/>, swap: <BsArrowRepeat/>},
-      icon: <FaEthereum/>
-    },
   ]
 
   return (
