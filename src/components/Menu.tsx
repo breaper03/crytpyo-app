@@ -12,7 +12,7 @@ const Menu = () => {
       name: "Inicio"
     },
     {
-      link: "/",
+      link: "/orbitPay",
       hidden: false,
 
       icon: <GiGoblinHead/>,
@@ -31,7 +31,7 @@ const Menu = () => {
       <div className='w-[16.3125rem] flex flex-nowrap items-center justify-between py-6 px-8 bg-[#fafafa] mb-5 h-10 rounded-full shadow-lg'>
         {
           menuItems.map((item) => (
-            <Link href={`/`} key={Math.random()} className={`${item.hidden ? "hidden":""}`}>
+            <Link href={`${item.link}`} key={Math.random()} className={`${item.hidden ? "hidden":""}`}>
               <Button className={`text-2xl bg-transparent`} isIconOnly >{item.icon}</Button>
             </Link>
           ))

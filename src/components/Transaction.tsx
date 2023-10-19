@@ -35,12 +35,18 @@ const Transactions = () => {
 
   return (
     <>
-      <div className="bg-white shadow-lg w-full h-fit py-2 px-1 rounded-xl">
+      <div className="bg-white shadow-lg w-full h-fit py-2 rounded-xl">
         <div className="flex flex-col items-center justify-between">
+          <div className="h-[1.0625rem] w-full text-[0.625rem] mb-1 bg-transparent flex flex-wrap items-center">
+            <span className="flex flex-wrap items-center ml-[0.88rem] font-bold">Últimas transacciones</span>
+          </div>
+          <div className="h-[1.0625rem] w-full text-[0.5625rem] bg-[#D9D9D9A6] flex flex-wrap items-center">
+            <span className="flex flex-wrap items-center ml-[0.88rem] font-semibold">15 de junio</span>
+          </div>
           {
             transactionsHistory.map((item: Transaction) => (
-              <div key={Math.random()} className='flex flex-wrap items-center justify-between w-full px-8 py-1'>
-                <div className="flex items-center gap-10">
+              <div key={Math.random()} className='flex flex-wrap items-center justify-between w-full px-[1.06rem] py-1'>
+                <div className="flex items-center gap-[0.69rem] py-2">
                   <span>
                     {
                       item.type === TransactionType.receive 
@@ -48,18 +54,18 @@ const Transactions = () => {
                         : <span className='text-[--red] font-extrabold text-xl'><CgArrowBottomLeftO/></span>
                     }
                   </span>
-                  <div className="flex flex-col">
+                  <div className="flex flex-col leading-[0.925rem]">
                     <div className="flex flex-nowrap items-end">
-                      <span className="font-bold text-xl mr-1">{item.coin}</span>
-                      <span className="text-xs py-1 font-extralight">{item.coinName}</span>
+                      <span className="font-bold text-[1rem] mr-[1px]">{item.coin}</span>
+                      <span className="text-[0.5625rem]  font-extralight">{item.coinName}</span>
                     </div>
-                    <div className="text-[--blur-blue] text-base uppercase">
+                    <div className="text-[--blur-blue] text-[0.75rem] uppercase">
                       {item.type === TransactionType.receive ? "Recibiste" : "Enviaste"}
                     </div>
                   </div>
                 </div>
                 <div>
-                  <span className={`${item.type === TransactionType.receive ? "text-[--green]" : "text-[--red]"} font-bold text-lg`}>
+                  <span className={`${item.type === TransactionType.receive ? "text-[--green]" : "text-[--red]"} font-bold text-[1rem]`}>
                     $ {item.quantity}
                   </span>
                 </div>
