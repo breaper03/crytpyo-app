@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
 import './globals.css'
 import { Providers } from './providers'
+import Menu from '@/components/Menu'
 
 const roboto = Roboto({ weight: ['300'], subsets: ['latin']})
 
@@ -16,11 +17,16 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className='light'>
-      <body className={`${roboto.className} w-full h-screen text-[--blue] bg-[--light-blue] scroll-smooth`}>
-        <Providers>
-          {children}
-        </Providers>
+    <html lang="en" className='light bg-[--light-blue]'>
+      <body className={`${roboto.className} max-h-screen text-[--blue] bg-[--light-blue] scroll-smooth`}>
+        <div className="flex flex-col-reverse w-full h-fit bg-[--light-blue]">
+          <Providers>
+            {children}
+            <div className="flex items-center w-full  justify-center bg-[--light-blue] h-fit">
+              <Menu />
+            </div>
+          </Providers>
+        </div>
       </body>
     </html>
   )

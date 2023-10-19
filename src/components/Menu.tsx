@@ -2,6 +2,7 @@ import { GrTransaction, GrHome } from "react-icons/gr"
 import { GiGoblinHead } from "react-icons/gi"
 import { Button } from "@nextui-org/react"
 import Link from "next/link"
+
 const Menu = () => {
   
   const menuItems = [
