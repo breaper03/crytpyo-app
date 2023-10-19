@@ -35,7 +35,7 @@ const Transactions = () => {
 
   return (
     <>
-      <div className="bg-white shadow-lg w-full h-fit py-2 px-1 rounded-lg">
+      <div className="bg-white shadow-lg w-full h-fit py-2 px-1 rounded-xl">
         <div className="flex flex-col items-center justify-between">
           {
             transactionsHistory.map((item: Transaction) => (

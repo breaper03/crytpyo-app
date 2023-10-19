@@ -8,6 +8,7 @@ import {GoInfo} from "react-icons/go"
 import { BiSolidUserCircle, BiSolidBell } from "react-icons/bi"
 import Menu from "@/components/Menu"
 import Carrusel from "@/components/Carrusel"
+import { BsFillTrashFill } from "react-icons/bs"
 
 export default function Home() {
 
@@ -43,15 +44,17 @@ export default function Home() {
                   isIconOnly
                   className="text-3xl border-0 text-[--blue]"
                 >
-                  <BiSolidBell/>
+                  <Badge className="bg-[--red]" size="sm" content="">
+                    <BiSolidBell/>
+                  </Badge>
                 </Button>
               </DropdownTrigger>
               <DropdownMenu aria-label="Static Actions">
                 {
                   notifications.map((item) => (
                     <DropdownItem key="edit" className="w-full flex flex-nowrap items-center">
-                      <span className={`${item.type === TransactionType.receive ? "text-[--green]" : "text-[--red]"} `}>{item.text}</span>
-                      <span className="flex items-center justify-between">{item.date}</span>
+                      <span className={`${item.type === TransactionType.receive ? "text-[--green]" : "text-[--red]"} font-extrabold `}>{item.text}</span>
+                      <span className="flex items-center justify-between font-semibold">{item.date}</span>
                     </DropdownItem>
                   ))
                 }
@@ -59,7 +62,7 @@ export default function Home() {
             </Dropdown>
           </div>
           {/* Carrusel */}
-          <div className="flex flex-nowrap items-center justify-between w-full h-16 bg-[--blue] text-white text-2xl rounded-lg px-4 py-2">
+          <div className="flex flex-nowrap items-center justify-between w-full h-[5rem]  text-white text-2xl rounded-lg px-1 py-1">
             <Carrusel/>
           </div>
           {/* Balance */}

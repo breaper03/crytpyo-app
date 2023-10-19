@@ -28,7 +28,7 @@ const Menu = () => {
 
   return (
     <>
-      <div className='w-9/12 flex flex-nowrap items-center justify-between py-6 px-12 bg-[#fafafa] mb-5 h-10 rounded-full shadow-lg'>
+      <div className='w-[16.3125rem] flex flex-nowrap items-center justify-between py-6 px-8 bg-[#fafafa] mb-5 h-10 rounded-full shadow-lg'>
         {
           menuItems.map((item) => (
             <Link href={`/`} key={Math.random()} className={`${item.hidden ? "hidden":""}`}>
